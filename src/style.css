@@ -16,10 +16,22 @@
 .weatherConditions {
   display: block;
 }
-
+.units {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 2px;
+  top: -19px;
+  font-family: mystery quest;
+}
+#temperature {
+  font-size: 40px;
+  display: inline;
+  color: #ebaa68;
+  line-height: 1;
+}
 #searchbar-form {
   padding: 2px 65px 2px 5px;
-  margin: 0auto;
+  margin: 0 auto;
   color: #fff;
   background: #ebaa68;
   border-radius: 5px;
@@ -36,9 +48,7 @@ h1,
 h6 {
   font-family: major mono display;
 }
-h1 {
-  font-size: 24px;
-}
+
 button {
   background: #fff;
   color: #ebaa68;

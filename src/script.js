@@ -110,4 +110,4 @@ submitButtonEvent.addEventListener("click", submitButton);
 
 navigator.geolocation.getCurrentPosition(showCurrentPosition);
 
-searchCityInput("New York City");
+searchCityInput("New York");
