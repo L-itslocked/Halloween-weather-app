@@ -53,7 +53,10 @@ function displayWeatherCondition(response) {
   let displayHumidity = document.querySelector("#humidity");
   let weatherIcon = document.querySelector("#weather-icon");
 
-  weatherIcon.setAttribute("src", ``);
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+  );
   displayTemperature.innerHTML = `${temperature}`;
   displayCityName.innerHTML = response.data.name;
   displayWindSpeed.innerHTML =
@@ -110,4 +113,4 @@ submitButtonEvent.addEventListener("click", submitButton);
 
 navigator.geolocation.getCurrentPosition(showCurrentPosition);
 
-searchCityInput("New York");
+searchCityInput("London");

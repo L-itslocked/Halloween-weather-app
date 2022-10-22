@@ -25,6 +25,10 @@
   top: -15px;
   cursor: normal;
 }
+#weather-icon {
+  display: block;
+  margin: 0 auto;
+}
 #currentTemperature {
   font-family: major mono display;
   font-size: 35px;
@@ -68,9 +72,9 @@ search-control:hover {
   color: #fff;
   border: #fff 2px solid;
 }
-img {
+.ghost-img {
   display: block;
-  margin: -95px 300px;
+  margin: -95px 320px;
 }
 footer {
   font-size: 9px;
