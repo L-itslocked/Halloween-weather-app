@@ -1,0 +1,68 @@
+.container {
+  margin: 10px auto;
+  display: block;
+  max-width: 500px;
+  border-radius: 5px;
+}
+.wrapper {
+  border: lightgray 1px solid;
+  border-radius: 5px;
+}
+.weather-app {
+  color: #fff;
+  background: #000000;
+  padding: 25px;
+}
+.weatherConditions {
+  display: block;
+}
+
+#searchbar-form {
+  padding: 2px 65px 2px 5px;
+  margin: 0auto;
+  color: #fff;
+  background: #ebaa68;
+  border-radius: 5px;
+}
+h2,
+h3 {
+  font-family: mystery quest;
+}
+h3 {
+  font-size: 20px;
+  margin: 0 0 50px;
+}
+h1,
+h6 {
+  font-family: major mono display;
+}
+h1 {
+  font-size: 24px;
+}
+button {
+  background: #fff;
+  color: #ebaa68;
+  border: #ebaa68 2px solid;
+  margin: 10px auto;
+  padding: 5px 16px;
+  text-align: center;
+  border-radius: 5px;
+}
+button:hover {
+  background: #ebaa68;
+  color: #fff;
+  border: #fff 2px solid;
+}
+img {
+  display: block;
+  margin: 0 300px;
+}
+footer {
+  font-size: small;
+}
+a {
+  color: #ebaa68;
+}
+a:hover {
+  color: #881ee4;
+}
