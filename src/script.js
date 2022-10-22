@@ -53,9 +53,11 @@ function displayWeatherCondition(response) {
   let displayHumidity = document.querySelector("#humidity");
   let weatherIcon = document.querySelector("#weather-icon");
 
+  weatherIcon.setAttribute("src", ``);
   displayTemperature.innerHTML = `${temperature}`;
   displayCityName.innerHTML = response.data.name;
-  displayWindSpeed.innerHTML = "Wind: " + Math.round(response.data.wind.speed) "m/sec";
+  displayWindSpeed.innerHTML =
+    "Wind: " + Math.round(response.data.wind.speed) + " m/s";
   displayHumidity.innerHTML =
     "Humidity: " + Math.round(response.data.main.humidity) + "%";
 
@@ -98,7 +100,7 @@ function searchCityInput(city) {
 }
 
 function submitButton(event) {
-  event.preventDefault;
+  event.preventDefault();
   let city = document.querySelector("#searchbar-form").value;
   searchCityInput(city);
 }
