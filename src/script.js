@@ -38,10 +38,16 @@ let minutes = currentTime.getMinutes();
 let time = `${hour}:${minutes}`;
 
 function formatDate(now) {
-  return `${day}, <br/>${month} ${date}, ${time}`;
+  return `${day}, ${month} ${date}`;
 }
-let updateH3 = document.querySelector("h3");
-updateH3.innerHTML = `${formatDate(currentTime)}`;
+function formatTime(now) {
+  return `Last updated: ${time}`;
+}
+
+let updateHeading3 = document.querySelector("h3");
+updateHeading3.innerHTML = `${formatDate(currentTime)}`;
+let updateHeading4 = document.querySelector("h4");
+updateHeading4.innerHTML = `${formatTime(currentTime)}`;
 
 // Show current position temperature & temp conversion
 

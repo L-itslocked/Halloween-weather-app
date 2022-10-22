@@ -16,6 +16,8 @@
 }
 .weatherConditions {
   display: block;
+  margin: 0 auto;
+  padding-bottom: 50px;
 }
 .units {
   font-family: mystery quest;
@@ -25,9 +27,15 @@
   top: -15px;
   cursor: normal;
 }
+.time {
+  font-size: 16px;
+  font-family: mystery quest;
+}
 #weather-icon {
   display: block;
-  margin: 0 auto;
+  margin: -130px 325px;
+  width: 60px;
+  height: 60px;
 }
 #currentTemperature {
   font-family: major mono display;
@@ -49,11 +57,22 @@ h3 {
 }
 h3 {
   font-size: 20px;
-  margin: 0 0 50px;
+  margin: 0 auto;
+  padding-bottom: 10px;
 }
-
-h6 {
+h4 {
+  font-size: 9px;
+  font-weight: normal;
+  display: block;
+  margin: 0 auto;
+}
+h6,
+h4 {
   font-family: major mono display;
+}
+h3,
+h6 {
+  text-align: center;
 }
 
 .location-button,
