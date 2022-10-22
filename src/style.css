@@ -18,16 +18,16 @@
   display: block;
 }
 .units {
-  font-family: null;
+  font-family: mystery quest;
   font-size: 14px;
   position: relative;
   letter-spacing: 3px;
-  top: -45px;
+  top: -15px;
   cursor: normal;
 }
 #currentTemperature {
   font-family: major mono display;
-  font-size: 34px;
+  font-size: 35px;
   display: inline;
   color: #ebaa68;
   line-height: 1;
