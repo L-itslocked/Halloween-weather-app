@@ -110,6 +110,4 @@ submitButtonEvent.addEventListener("click", submitButton);
 
 navigator.geolocation.getCurrentPosition(showCurrentPosition);
 
-//let apiKey = "a8040567o3f30d69bbe0b02acftfa14f";
-//let apiEndPoint = `https://api.shecodes.io/weather/v1/forecast`;
-//let apiUrl = `${apiEndPoint}?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
+searchCityInput("New York City");

@@ -5,7 +5,7 @@
   border-radius: 5px;
 }
 .wrapper {
-  border: lightgray 1px solid;
+  border: #ebaa68 2px dashed;
   border-radius: 5px;
 }
 .weather-app {
@@ -55,10 +55,12 @@ button:hover {
 }
 img {
   display: block;
-  margin: 0 300px;
+  margin: -95px 300px;
 }
 footer {
-  font-size: small;
+  font-size: 9px;
+  margin: 20px 0 0 auto;
+  text-align: right;
 }
 a {
   color: #ebaa68;
