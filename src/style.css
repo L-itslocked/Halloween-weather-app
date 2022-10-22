@@ -7,6 +7,7 @@
 .wrapper {
   border: #ebaa68 2px dashed;
   border-radius: 5px;
+  background: #000000;
 }
 .weather-app {
   color: #fff;
@@ -17,14 +18,16 @@
   display: block;
 }
 .units {
-  position: relative;
+  font-family: null;
   font-size: 14px;
-  letter-spacing: 2px;
-  top: -19px;
-  font-family: mystery quest;
+  position: relative;
+  letter-spacing: 3px;
+  top: -45px;
+  cursor: normal;
 }
-#temperature {
-  font-size: 40px;
+#currentTemperature {
+  font-family: major mono display;
+  font-size: 34px;
   display: inline;
   color: #ebaa68;
   line-height: 1;
@@ -44,12 +47,13 @@ h3 {
   font-size: 20px;
   margin: 0 0 50px;
 }
-h1,
+
 h6 {
   font-family: major mono display;
 }
 
-button {
+.location-button,
+.search-control {
   background: #fff;
   color: #ebaa68;
   border: #ebaa68 2px solid;
@@ -58,7 +62,8 @@ button {
   text-align: center;
   border-radius: 5px;
 }
-button:hover {
+.location-button:hover,
+search-control:hover {
   background: #ebaa68;
   color: #fff;
   border: #fff 2px solid;
@@ -69,8 +74,9 @@ img {
 }
 footer {
   font-size: 9px;
-  margin: 20px 0 0 auto;
+  margin: 0 5px 5px auto;
   text-align: right;
+  color: #fff;
 }
 a {
   color: #ebaa68;
