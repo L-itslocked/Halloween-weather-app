@@ -119,4 +119,4 @@ submitButtonEvent.addEventListener("click", submitButton);
 
 navigator.geolocation.getCurrentPosition(showCurrentPosition);
 
-searchCityInput("London");
+searchCityInput("Salem");
