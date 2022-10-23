@@ -41,7 +41,7 @@ function formatDate(now) {
   return `${day}, ${month} ${date}`;
 }
 function formatTime(now) {
-  return `Last updated: ${time}`;
+  return `Last updated ${time}`;
 }
 
 let updateHeading3 = document.querySelector("h3");

@@ -31,9 +31,11 @@
   font-size: 16px;
   font-family: mystery quest;
 }
+#weather-location {
+}
 #weather-icon {
   display: block;
-  margin: -130px 325px;
+  margin: -130px 350px;
   width: 60px;
   height: 60px;
 }
@@ -43,6 +45,7 @@
   display: inline;
   color: #ebaa68;
   line-height: 1;
+  margin: 0 auto;
 }
 #searchbar-form {
   padding: 2px 65px 2px 5px;
@@ -64,7 +67,7 @@ h4 {
   font-size: 9px;
   font-weight: normal;
   display: block;
-  margin: 0 auto;
+  margin: -10px auto;
 }
 h6,
 h4 {
@@ -93,7 +96,7 @@ search-control:hover {
 }
 .ghost-img {
   display: block;
-  margin: -95px 320px;
+  margin: -95px 273px;
 }
 footer {
   font-size: 9px;
