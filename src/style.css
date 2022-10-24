@@ -68,17 +68,24 @@ a:hover {
   background: #fff;
   color: #ebaa68;
   border: #ebaa68 2px solid;
-  margin: 10px 0 auto;
-  padding: 5px 13px;
+  margin: 8px auto;
+  padding: 5px 20px;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 5px;
   font-size: 12px;
 }
+.search-control {
+  margin-left: 30px;
+}
+.location-button {
+  margin-left: -30px;
+}
 .location-button:hover,
-search-control:hover {
+.search-control:hover {
   background: #ebaa68;
   color: #fff;
   border: #fff 2px solid;
+  transition: 200ms ease-in-out;
 }
 .ghost-img {
   display: block;
@@ -86,7 +93,7 @@ search-control:hover {
 }
 .weather-forecast {
   display: block;
-  margin: 0 auto;
+  margin: 1px 0 auto;
   padding: 8px;
   text-align: center;
   border-radius: 3px;
@@ -98,19 +105,18 @@ search-control:hover {
   font-family: major mono display;
 }
 .forecast-day {
-  font-size: 14px;
+  font-size: 13px;
 }
 .forecast-temp-high {
-  font-size: 12px;
+  font-size: 11px;
 }
 .forecast-temp-low {
-  font-size: 11px;
+  font-size: 10px;
 }
 .forecast-img {
   background-color: #a18270;
   border-radius: 12px;
 }
-
 #weather-icon {
   display: block;
   margin: -130px 350px;
@@ -126,10 +132,16 @@ search-control:hover {
   margin: 0 auto;
 }
 #searchbar-form {
-  padding: 5px 70px 5px 5px;
+  padding: 5px 80px 5px 5px;
   margin: 0 auto;
-  color: #fff;
-  background: #ebaa68;
-  border-radius: 3px;
+  color: #d3d3d3;
+  background: #3f3c56;
   border: none;
+  border-radius: 3px;
+  outline: 0;
+  font-family: monospace;
+}
+#searchbar-form::placeholder {
+  color: #8c807a;
+  font-family: monospace;
 }
