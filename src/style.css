@@ -1,3 +1,38 @@
+h2,
+h3 {
+  font-family: mystery quest;
+}
+h3 {
+  font-size: 20px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+h4 {
+  font-size: 9px;
+  font-weight: normal;
+  display: block;
+  margin: -10px auto;
+}
+h6,
+h4 {
+  font-family: major mono display;
+}
+h3,
+h6 {
+  text-align: center;
+}
+footer {
+  font-size: 9px;
+  margin: 0 5px 5px auto;
+  text-align: right;
+  color: #fff;
+}
+a {
+  color: #ebaa68;
+}
+a:hover {
+  color: #881ee4;
+}
 .container {
   margin: 10px auto;
   display: block;
@@ -27,54 +62,10 @@
   top: -15px;
   cursor: normal;
 }
+
 .time {
   font-size: 16px;
   font-family: mystery quest;
-}
-
-#weather-icon {
-  display: block;
-  margin: -130px 350px;
-  width: 60px;
-  height: 60px;
-}
-#currentTemperature {
-  font-family: major mono display;
-  font-size: 35px;
-  display: inline;
-  color: #ebaa68;
-  line-height: 1;
-  margin: 0 auto;
-}
-#searchbar-form {
-  padding: 2px 65px 2px 5px;
-  margin: 0 auto;
-  color: #fff;
-  background: #ebaa68;
-  border-radius: 5px;
-}
-h2,
-h3 {
-  font-family: mystery quest;
-}
-h3 {
-  font-size: 20px;
-  margin: 0 auto;
-  padding-bottom: 10px;
-}
-h4 {
-  font-size: 9px;
-  font-weight: normal;
-  display: block;
-  margin: -10px auto;
-}
-h6,
-h4 {
-  font-family: major mono display;
-}
-h3,
-h6 {
-  text-align: center;
 }
 
 .location-button,
@@ -97,15 +88,25 @@ search-control:hover {
   display: block;
   margin: -95px 273px;
 }
-footer {
-  font-size: 9px;
-  margin: 0 5px 5px auto;
-  text-align: right;
-  color: #fff;
+
+#weather-icon {
+  display: block;
+  margin: -130px 350px;
+  width: 60px;
+  height: 60px;
 }
-a {
+#currentTemperature {
+  font-family: major mono display;
+  font-size: 35px;
+  display: inline;
   color: #ebaa68;
+  line-height: 1;
+  margin: 0 auto;
 }
-a:hover {
-  color: #881ee4;
+#searchbar-form {
+  padding: 2px 65px 2px 5px;
+  margin: 0 auto;
+  color: #fff;
+  background: #ebaa68;
+  border-radius: 5px;
 }
