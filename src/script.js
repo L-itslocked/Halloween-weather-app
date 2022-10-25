@@ -120,15 +120,21 @@ function displayWeatherCondition(response) {
   function displayCelsius(event) {
     event.preventDefault();
     let temperatureHeading = document.querySelector("#currentTemperature");
+    let windSpeedConversion = document.querySelector("#wind");
     temperatureHeading.innerHTML = Math.round(
       ((`${temperature}` - 32) * 5) / 9
     );
+    windSpeedConversion.innerHTML =
+      "Wind: " + Math.round(response.data.wind.speed) + " km/h";
   }
 
   function displayFahrenheit(event) {
     event.preventDefault();
     let temperatureHeading = document.querySelector("#currentTemperature");
+    let displayWindSpeed = document.querySelector("#wind");
     temperatureHeading.innerHTML = Math.round(response.data.main.temp);
+    displayWindSpeed.innerHTML =
+      "Wind: " + Math.round(response.data.wind.speed * 2.237) + " mph";
   }
 
   let celsiusUnitEvent = document.querySelector("#celsius");
