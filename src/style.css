@@ -98,7 +98,7 @@ a:hover {
 }
 .weather-forecast {
   display: block;
-  margin: 10px 0 auto;
+  margin: 15px 0 auto;
   padding: 8px;
   text-align: center;
   border-radius: 3px;
@@ -113,10 +113,11 @@ a:hover {
   font-size: 13px;
 }
 .forecast-temp-high {
-  font-size: 11px;
+  font-size: 11.5px;
 }
 .forecast-temp-low {
-  font-size: 10px;
+  font-size: 11px;
+  opacity: 0.8;
 }
 .forecast-img {
   background-color: #a18270;
@@ -137,10 +138,11 @@ a:hover {
   margin: 0 auto;
 }
 #searchbar-form {
-  padding: 5px 80px 5px 5px;
+  padding: 8px;
   margin: 0 auto;
   color: #d3d3d3;
   background: #3f3c56;
+  width: 300px;
   border: none;
   border-radius: 3px;
   outline: 0;
