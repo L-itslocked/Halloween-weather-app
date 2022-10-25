@@ -1,5 +1,11 @@
 body {
-  background: linear-gradient(to right, #868f96 0%, #596164 100%);
+  background: -webkit-repeating-radial-gradient(
+    #5f2384,
+    #3a0956,
+    #310849,
+    #1c0526,
+    #32004f
+  );
 }
 h2,
 h3 {
