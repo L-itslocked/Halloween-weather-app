@@ -70,7 +70,6 @@ a:hover {
   position: relative;
   letter-spacing: 3px;
   top: -15px;
-  cursor: normal;
 }
 
 .location-button,
@@ -129,6 +128,12 @@ a:hover {
   background-color: #a18270;
   border-radius: 12px;
 }
+#fahrenheit,
+#celsius {
+  text-decoration: none;
+  cursor: default;
+}
+
 #weather-icon {
   display: block;
   margin: -50px 300px 50px;
@@ -157,4 +162,7 @@ a:hover {
 #searchbar-form::placeholder {
   color: #8c807a;
   font-family: monospace;
+}
+#open-source-link {
+  cursor: pointer;
 }
