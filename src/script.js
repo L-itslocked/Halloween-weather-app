@@ -108,12 +108,12 @@ function displayWeatherCondition(response) {
 
   weatherIcon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
   );
   displayTemperature.innerHTML = `${temperature}`;
   displayCityName.innerHTML = response.data.name;
   displayWindSpeed.innerHTML =
-    "Wind: " + Math.round(response.data.wind.speed) + " m/s";
+    "Wind: " + Math.round(response.data.wind.speed * 2.237) + " mph";
   displayHumidity.innerHTML =
     "Humidity: " + Math.round(response.data.main.humidity) + "%";
 
