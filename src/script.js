@@ -50,6 +50,38 @@ let updateHeading4 = document.querySelector("h4");
 updateHeading4.innerHTML = `${formatTime(currentTime)}`;
 
 // Show current position temperature & temp conversion
+function displayWeatherForecast(response) {
+  console.log(response.data.daily);
+  let weatherForecastElement = document.querySelector("#weather-forecast");
+  let weatherForecastHTML = `<div class="row">`;
+  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    weatherForecastHTML =
+      weatherForecastHTML +
+      `<div class="col-2">
+                  <div class="forecast-day">${day}</div>
+                    <img
+                      src="https://openweathermap.org/img/wn/10d@2x.png"
+                      width="40"
+                      class="forecast-img"
+                    />
+                      <div class="forecast-temperatures">
+                        <span class="forecast-temp-high">74°</span>
+                        <span class="forecast-temp-low">45°</span>
+                      </div>
+                  </div>`;
+  });
+  weatherForecastHTML = weatherForecastHTML + `</div>`;
+  weatherForecastElement.innerHTML = weatherForecastHTML;
+}
+function retrieveForecast(coordinates) {
+  let units = "imperial";
+  let apiKey = "f5e814a04eddfab1740f07bf0328eee2";
+  let apiEndPoint = `https://api.openweathermap.org/data/2.5`;
+  let apiUrl = `${apiEndPoint}/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(displayWeatherForecast);
+}
 
 function displayWeatherCondition(response) {
   let displayTemperature = document.querySelector("#currentTemperature");
@@ -88,6 +120,8 @@ function displayWeatherCondition(response) {
   let fahrenheitUnitEvent = document.querySelector("#fahrenheit");
   fahrenheitUnitEvent.addEventListener("click", displayFahrenheit);
   celsiusUnitEvent.addEventListener("click", displayCelsius);
+
+  retrieveForecast(response.data.coord);
 }
 function showCurrentPosition(position) {
   let latitude = position.coords.latitude;
@@ -114,34 +148,9 @@ function submitButton(event) {
   searchCityInput(city);
 }
 
-function displayWeatherForecast() {
-  let weatherForecastElement = document.querySelector("#weather-forecast");
-  let weatherForecastHTML = `<div class="row">`;
-  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    weatherForecastHTML =
-      weatherForecastHTML +
-      `<div class="col-2">
-                  <div class="forecast-day">${day}</div>
-                    <img
-                      src="https://openweathermap.org/img/wn/10d@2x.png"
-                      width="50"
-                      class="forecast-img"
-                    />
-                      <div class="forecast-temperatures">
-                          <span class="forecast-temp-high">74°</span>
-                        <span class="forecast-temp-low">45°</span>
-                      </div>
-                  </div>`;
-  });
-  weatherForecastHTML = weatherForecastHTML + `</div>`;
-  weatherForecastElement.innerHTML = weatherForecastHTML;
-}
-
 let submitButtonEvent = document.querySelector("#submit-button");
 submitButtonEvent.addEventListener("click", submitButton);
 
 navigator.geolocation.getCurrentPosition(showCurrentPosition);
 
 searchCityInput("Salem");
-displayWeatherForecast();
