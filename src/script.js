@@ -49,31 +49,46 @@ updateHeading3.innerHTML = `${formatDate(currentTime)}`;
 let updateHeading4 = document.querySelector("h4");
 updateHeading4.innerHTML = `${formatTime(currentTime)}`;
 
-// Show current position temperature & temp conversion
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayWeatherForecast(response) {
-  console.log(response.data.daily);
+  let eachDayForecast = response.data.daily;
   let weatherForecastElement = document.querySelector("#weather-forecast");
   let weatherForecastHTML = `<div class="row">`;
-  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    weatherForecastHTML =
-      weatherForecastHTML +
-      `<div class="col-2">
-                  <div class="forecast-day">${day}</div>
+
+  eachDayForecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      weatherForecastHTML =
+        weatherForecastHTML +
+        `<div class="col-2">
+                  <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
                     <img
-                      src="https://openweathermap.org/img/wn/10d@2x.png"
+                      src="https://openweathermap.org/img/wn/${
+                        forecastDay.weather[0].icon
+                      }.png"
                       width="40"
                       class="forecast-img"
                     />
                       <div class="forecast-temperatures">
-                        <span class="forecast-temp-high">74°</span>
-                        <span class="forecast-temp-low">45°</span>
+                        <span class="forecast-temp-high">${Math.round(
+                          forecastDay.temp.max
+                        )}°</span>
+                        <span class="forecast-temp-low">${Math.round(
+                          forecastDay.temp.min
+                        )}°</span>
                       </div>
                   </div>`;
+    }
   });
   weatherForecastHTML = weatherForecastHTML + `</div>`;
   weatherForecastElement.innerHTML = weatherForecastHTML;
 }
+
 function retrieveForecast(coordinates) {
   let units = "imperial";
   let apiKey = "f5e814a04eddfab1740f07bf0328eee2";
