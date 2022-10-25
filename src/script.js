@@ -114,9 +114,34 @@ function submitButton(event) {
   searchCityInput(city);
 }
 
+function displayWeatherForecast() {
+  let weatherForecastElement = document.querySelector("#weather-forecast");
+  let weatherForecastHTML = `<div class="row">`;
+  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    weatherForecastHTML =
+      weatherForecastHTML +
+      `<div class="col-2">
+                  <div class="forecast-day">${day}</div>
+                    <img
+                      src="https://openweathermap.org/img/wn/10d@2x.png"
+                      width="50"
+                      class="forecast-img"
+                    />
+                      <div class="forecast-temperatures">
+                          <span class="forecast-temp-high">74°</span>
+                        <span class="forecast-temp-low">45°</span>
+                      </div>
+                  </div>`;
+  });
+  weatherForecastHTML = weatherForecastHTML + `</div>`;
+  weatherForecastElement.innerHTML = weatherForecastHTML;
+}
+
 let submitButtonEvent = document.querySelector("#submit-button");
 submitButtonEvent.addEventListener("click", submitButton);
 
 navigator.geolocation.getCurrentPosition(showCurrentPosition);
 
 searchCityInput("Salem");
+displayWeatherForecast();

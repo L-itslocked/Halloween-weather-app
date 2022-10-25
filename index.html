@@ -72,8 +72,11 @@
                     id="searchbar-form"
                   />
                 </div>
-              </div>
 
+                <span class="col-6">
+                  <img src="#" alt="" id="weather-icon" />
+                </span>
+              </div>
               <div class="row">
                 <span class="col-md-5">
                   <button
@@ -89,41 +92,17 @@
                     Current 📍
                   </button>
                 </span>
+                <span class="col-10">
+                  <img
+                    src="images/undraw_halloween_bg6h.svg"
+                    width="100px"
+                    class="ghost-img"
+                  />
+                </span>
               </div>
             </div>
           </form>
-
-          <div class="row">
-            <div class="col-12">
-              <img src="#" alt="" id="weather-icon" />
-            </div>
-            <br />
-          </div>
-          <div class="row">
-            <span class="col-12">
-              <img
-                src="images/undraw_halloween_bg6h.svg"
-                width="100px"
-                class="ghost-img"
-              />
-            </span>
-          </div>
-          <div class="weather-forecast">
-            <div class="row">
-              <div class="col-2">
-                <div class="forecast-day">Thurs</div>
-                <img
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  width="50"
-                  class="forecast-img"
-                />
-                <div class="forecast-temperatures">
-                  <span class="forecast-temp-high">74°</span>
-                  <span class="forecast-temp-low">45°</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="weather-forecast" id="weather-forecast"></div>
         </div>
         <footer>
           <a href="https://github.com/L-itslocked/Halloween-weather-app">
