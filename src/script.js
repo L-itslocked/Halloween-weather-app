@@ -131,6 +131,9 @@ function displayWeatherCondition(response) {
     );
     windSpeedConversion.innerHTML =
       "Wind: " + Math.round(response.data.wind.speed) + " km/h";
+    let banner = document.querySelector("#weather-forecast");
+    banner.innerHTML =
+      "<em><small><q>When witches go riding, and black cats are seen, <br/>the moon laughs and whispers, <br/>tis near Halloween</q></small></em>";
   }
 
   function displayFahrenheit(event) {
@@ -140,6 +143,7 @@ function displayWeatherCondition(response) {
     temperatureHeading.innerHTML = Math.round(response.data.main.temp);
     displayWindSpeed.innerHTML =
       "Wind: " + Math.round(response.data.wind.speed * 2.237) + " mph";
+    retrieveForecast(response.data.coord);
   }
 
   let celsiusUnitEvent = document.querySelector("#celsius");
