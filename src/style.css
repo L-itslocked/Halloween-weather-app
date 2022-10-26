@@ -42,7 +42,9 @@ a {
 a:hover {
   color: #881ee4;
 }
-
+q {
+  font-family: lora;
+}
 .container {
   margin: 20px auto;
   display: block;
