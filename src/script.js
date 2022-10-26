@@ -29,6 +29,11 @@ let date = now.getDate();
 let day = days[now.getDay()];
 let month = months[now.getMonth()];
 let hour = currentTime.getHours();
+{
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+}
 let minutes = currentTime.getMinutes();
 {
   if (minutes < 10) {
